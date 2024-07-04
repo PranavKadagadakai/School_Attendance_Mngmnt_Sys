@@ -2,7 +2,7 @@ import mysql.connector as a
 import smtplib
 
 # Establish the database connection
-con = a.connect(host='localhost', password='Jeeshan@87867', user='root')
+con = a.connect(host='localhost', password='', user='') # Enter username, password, and host of your MySQL
 
 # Create cursor
 c = con.cursor()
@@ -13,8 +13,8 @@ def send_email():
     # Set up the SMTP server
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
-    email_ = 'jeeshaninamdar7@gmail.com'
-    pass_ = 'kpnj skqq smom cidd'
+    email_ = ''# Add your email id here
+    pass_ = '' # Enter your email's app password
     s.login(email_, pass_)
 
     # Execute the SQL query
