@@ -1,13 +1,13 @@
 import mysql.connector as a
 import smtplib
-import database
+import CreateDB
 
 # Establish the database connection
 con = a.connect(host='localhost', password='', user='') # Enter username, password, and host of your MySQL
 
 # Create cursor
 c = con.cursor()
-database.create_DB(con)
+CreateDB.create_DB(con)
 
 
 def send_email():
