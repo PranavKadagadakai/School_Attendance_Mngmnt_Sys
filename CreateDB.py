@@ -62,6 +62,9 @@ def create_DB(con):
 
     c.execute('''CREATE TABLE IF NOT EXISTS alert(
     alert_id int AUTO_INCREMENT PRIMARY KEY,
-    message VARCHAR(25),
-    sent_to VARCHAR(25)
+    message TEXT,
+    sent_to VARCHAR(25),
+    student_name VARCHAR(25),
+    student_id int,
+    FOREIGN KEY(student_id) REFERENCES student(student_id) ON DELETE CASCADE
     )''')
